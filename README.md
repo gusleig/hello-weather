@@ -15,12 +15,9 @@ In case of using Gmail, create an App Password. [See here for step-by-step](http
 
 ```
 <?xml version="1.0" encoding="UTF-8"?>
+<config>
 <apikey>xxxxxxxx</apikey>
 <cityid>3451189</cityid>
-<config>
-  <sid>ORACLE_SID</sid>
-  <cmdfile>d:\backup\scripts\rman.bkp.txt</cmdfile>
-    <bkp_path>d:\backup</bkp_path>
   <smtp>
       <from>email@alarm.com.br</from>
       <to>email@email.com.br</to>
