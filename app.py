@@ -128,7 +128,7 @@ def get_weather(apikey, location='Rio de Janeiro, BR'):
 
 if __name__ == "__main__":
 
-    currentdate = time.strftime("%Y-%m-%d_%H%M%S")
+    currentdate = time.strftime("%Y-%m-%d %H:%M:%S")
 
     get_config(cfgFile)
 
