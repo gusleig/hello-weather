@@ -99,9 +99,9 @@ def send_mail(date, body, subject, smtp, fromaddr, toaddr, ccaddr, server, port,
             s.login(fromaddr, passwd)
             s.sendmail(fromaddr, rcpt, email_text)
             s.close()
-        print("Email sent!")
+        print(time.strftime("%Y-%m-%d %H:%M:%S") + " : Email sent!")
     except:
-        print("Unable to send the email. Error: ", sys.exc_info()[0])
+        print(time.strftime("%Y-%m-%d %H:%M:%S") + " : Unable to send the email. Error: ", sys.exc_info()[0])
         raise
 
 
@@ -127,7 +127,7 @@ def get_weather(apikey, location='Rio de Janeiro, BR'):
 
 
 if __name__ == "__main__":
-
+    print(time.strftime("%Y-%m-%d %H:%M:%S") + " : Start")
     currentdate = time.strftime("%Y-%m-%d %H:%M:%S")
 
     get_config(cfgFile)
@@ -138,4 +138,4 @@ if __name__ == "__main__":
 
     send_mail(currentdate, body, subject, smtp, fromaddr, toaddr, ccaddr, server, port, useSSL, username, passwd)
 
-    print("Email sent")
+    print(time.strftime("%Y-%m-%d %H:%M:%S") + " : End")
