@@ -9,7 +9,9 @@ from email.mime.multipart import MIMEMultipart
 import pyowm
 
 
-cfgFile = os.path.realpath('./config.xml')
+pathname = os.path.dirname(sys.argv[0])
+
+cfgFile = pathname + '/config.xml'
 
 smtp = ''
 fromaddr = ''
